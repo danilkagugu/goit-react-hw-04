@@ -12,7 +12,11 @@ const ImageModal = ({ isOpen = false, photo, closeModal }) => {
       preventScroll={true}
       className={css.modal}
     >
-      <img className={css.imgCard} src={photo.src} />
+      <img
+        className={css.imgCard}
+        src={photo.src}
+        alt={photo.alt_description}
+      />
       <p>{photo.description}</p>
     </Modal>
   );

@@ -11,7 +11,11 @@ const ImageCard = ({ data, onSelect }) => {
         })
       }
     >
-      <img className={css.imgItem} src={data.urls.small} alt={data.alt} />
+      <img
+        className={css.imgItem}
+        src={data.urls.small}
+        alt={data.alt_description}
+      />
     </div>
   );
 };
