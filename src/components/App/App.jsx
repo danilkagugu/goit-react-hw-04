@@ -28,13 +28,12 @@ function App() {
       try {
         setLoaderVissible(true);
         const { results, total_pages } = await ApiService(query, page);
-        // const data = await ApiService(query, page);
-        // console.log(data);
 
         if (results.length === 0) {
           return toast.error("This didn't work.");
         }
 
+        console.log(query);
         setBtnLoadMore(total_pages > page);
         setPhoto((prevPhoto) => {
           return [...prevPhoto, ...results];
