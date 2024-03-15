@@ -1,0 +1,10 @@
+.imgList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.imgItem {
+  list-style: none;
+}

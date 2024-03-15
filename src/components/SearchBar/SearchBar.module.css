@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin: 0 auto;
+}
+
+.input {
+  padding: 15px;
+  width: 300px;
+  border-radius: 15px;
+  border-color: rgb(0, 119, 217);
+}
+
+.btnSearch {
+  display: block;
+  width: 150px;
+  border-radius: 15px;
+  border: none;
+  background-color: beige;
+  cursor: pointer;
+}
+
+.btnSearch:hover {
+  background-color: rgb(246, 246, 178);
+}

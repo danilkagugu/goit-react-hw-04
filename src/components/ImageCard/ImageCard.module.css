@@ -1,0 +1,13 @@
+.imgBox {
+  width: 360px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.imgBox:hover {
+  transform: scale(1.09);
+}
+
+.imgItem {
+  object-fit: cover;
+}
