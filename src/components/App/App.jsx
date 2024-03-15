@@ -60,9 +60,12 @@ function App() {
     setPage((prevPage) => prevPage + 1);
   };
 
-  function handleModal(state, photo) {
-    setModalIsOpen(state);
+  function openModal(state, photo) {
+    setModalIsOpen(true);
     if (state) setSelectedPhoto(photo);
+  }
+  function closeModal() {
+    setModalIsOpen(false);
   }
 
   return (
@@ -72,13 +75,11 @@ function App() {
       <SearchBar onSearch={searchPhoto} />
       {error && <ErrorMessage />}
       {loaderVissible && <Loader />}
-      {photo.length > 0 && (
-        <ImageGallery items={photo} onSelect={handleModal} />
-      )}
+      {photo.length > 0 && <ImageGallery items={photo} onSelect={openModal} />}
       {btnLoadMore && <LoadMoreBtn onClick={loadMore} />}
       <ImageModal
         isOpen={modalIsOpen}
-        closeModal={handleModal}
+        closeModal={closeModal}
         photo={selectedPhoto}
       />
     </>
