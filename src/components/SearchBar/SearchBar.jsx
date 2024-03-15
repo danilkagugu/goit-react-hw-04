@@ -4,10 +4,10 @@ import toast from "react-hot-toast";
 
 const SearchBar = ({ onSearch }) => {
   const handleSubmit = (values) => {
-    onSearch(values.query);
-    if (!values.query) {
+    if (!values.query.trim()) {
       return toast.error("Write anything😉");
     }
+    onSearch(values.query);
   };
   return (
     <header className={css.header}>
